@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+        {{user|json}}
+        <div class="col-lg-6 offset-3">
+            <form #f = "ngForm" (submit)="onsub(f.value)">
+                <div class="form-group">
+                    <label for=""> nom </label>
+                    <input type="text" class="form-control" [(ngModel)] ="user.nom" name="nom">
+                </div>
+
+                <div class="form-group">
+                    <label for=""> prénom </label>
+                    <input type="text" class="form-control"[(ngModel)] ="user.prenom" name="prenom">
+                </div>
+                <div class="form-group">
+                    <label for=""> adersse </label>
+                    <input type="text" class="form-control" [(ngModel)] = "user.adresse" name="adresse">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"> valider</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 offset-3">
+            <form #f = "ngForm" (submit)="onsub1(f.value)">
+                <div class="form-group">
+                    <label for=""> nom </label>
+                    <input type="text" class="form-control" ngModel name="nom">
+                </div>
+
+                <div class="form-group">
+                    <label for=""> prénom </label>
+                    <input type="text" class="form-control" ngModel name="prenom">
+                </div>
+                <div class="form-group">
+                    <label for=""> adersse </label>
+                    <input type="text" class="form-control" ngModel name="adresse">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"> Enregistrer</button>
+            </form>
+        </div>
+    </div>
+</div>
